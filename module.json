@@ -32,8 +32,8 @@
 	  }
 	]
   },
-  "scripts": [
-	"scripts/sustain-main.js"
+  "esmodules": [
+	  "./scripts/sustain-main.mjs"
   ],
   "styles": [
   ],

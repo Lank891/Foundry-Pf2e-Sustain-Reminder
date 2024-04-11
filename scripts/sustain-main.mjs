@@ -15,6 +15,7 @@ Hooks.on('init', () => {
 		default: true
 	});
 	*/
+	console.info('Sustian!!!!');
 	game.settings.register(moduleId, useChatSetting, {
 		name: 'Use chat',
 		hint: 'Reminds about sustained spells via chat.',
