@@ -1,0 +1,8 @@
+<div>
+	<p>Active sustained spell(s) for <b>{{actor.name}}</b>:</p>
+	<ul class="sustained_list">
+		{{#each effects as |effect|}}
+			<li>{{effect.name}}</li>
+		{{/each}}
+	</ul>
+</div>

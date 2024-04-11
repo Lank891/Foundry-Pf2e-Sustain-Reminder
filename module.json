@@ -1,0 +1,45 @@
+{
+  "id": "pf2e-sustain-reminder",
+  "title": "Pf2e Sustain Reminder",
+  "description": "A reminder about sustained spells that were cast.",
+  "license": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/LICENSE",
+  "readme": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/README.md",
+  "bugs": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/issues",
+  "author": "Lank",
+  "authors": [
+	{
+	  "name": "Lank",
+	  "discord": "lank891",
+	  "email": "h99_10@o2.pl",
+	  "flags": {}
+	}
+  ],
+  "version": "1.0.0",
+  "compatibility": {
+		"minimum": "11",
+		"verified": "11.315"
+  },
+  "relationships": {
+	"systems": [
+	  {
+		"id": "pf2e",
+		"type": "system",
+		"manifest": "https://github.com/foundryvtt/pf2e/releases/download/latest/system.json",
+		"compatibility": {
+		  "minimum": "5.15.0",
+		  "verified": "5.15.0"
+		}
+	  }
+	]
+  },
+  "scripts": [
+	"scripts/sustain-main.js"
+  ],
+  "styles": [
+  ],
+  "languages": [
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}
