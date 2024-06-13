@@ -5,13 +5,11 @@
   "license": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/LICENSE",
   "readme": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/README.md",
   "bugs": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/issues",
-  "author": "Lank",
   "authors": [
 	{
 	  "name": "Lank",
 	  "discord": "lank891",
-	  "email": "h99_10@o2.pl",
-	  "flags": {}
+	  "email": "h99_10@o2.pl"
 	}
   ],
   "version": "1.0.1",
