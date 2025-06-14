@@ -141,7 +141,7 @@ function createReminderEffect(spell) {
 		type: 'effect',
 		name: effectName,
 		img: image,
-		data: {
+		system: {
 			tokenIcon: { show: true },
 			duration: {
 				value: durationValue,
