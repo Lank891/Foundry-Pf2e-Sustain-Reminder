@@ -15,7 +15,6 @@ Hooks.on('init', () => {
 		default: true
 	});
 	*/
-	console.info('Sustian!!!!');
 	game.settings.register(moduleId, useChatSetting, {
 		name: 'Use chat',
 		hint: 'Reminds about sustained spells via chat.',
@@ -154,7 +153,7 @@ function createReminderEffect(spell) {
 				value: description
 			},
 			unindentified: false,
-			traits: spell.system.traits,
+			// traits: spell.system.traits,	// Effects can have traits, but those are definitely not needed here and most of those would be invalid anyway
 			level: effectLevel,
 			source: spell.system.source,
 			slug: `sustaining-effect-${spell.system.slug}`
