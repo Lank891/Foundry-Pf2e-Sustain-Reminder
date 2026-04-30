@@ -1,33 +1,32 @@
 {
   "id": "pf2e-sustain-reminder",
   "title": "Pf2e Sustain Reminder",
-  "description": "<p>A reminder about sustained spells that were cast.</p>",
+  "description": "A reminder about sustained spells that were cast.",
   "license": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/LICENSE",
   "readme": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/blob/main/README.md",
   "bugs": "https://github.com/Lank891/Foundry-Pf2e-Sustain-Reminder/issues",
   "authors": [
-    {
-      "name": "Lank",
-      "discord": "lank891",
-      "email": "h99_10@o2.pl",
-      "flags": {}
-    }
+	{
+	  "name": "Lank",
+	  "discord": "lank891",
+	  "email": "h99_10@o2.pl"
+	}
   ],
   "version": "1.1.0",
   "compatibility": {
-    "minimum": "14",
-    "verified": "14.360"
+		"minimum": "14",
+		"verified": "14.360"
   },
   "relationships": {
-    "systems": [
-      {
-        "id": "pf2e",
-        "type": "system",
-        "compatibility": {
-          "minimum": "8.0.0",
-          "verified": "8.0.3"
-        }
-      },
+	"systems": [
+	  {
+		"id": "pf2e",
+		"type": "system",
+		"compatibility": {
+		  "minimum": "8.0.0",
+		  "verified": "8.0.3"
+		}
+	  },
       {
         "id": "sf2e",
         "type": "system",
@@ -35,12 +34,17 @@
           "minimum": "1.0.3",
           "verified": "1.0.3"
         }
-      }
-    ]
+	  }
+	]
   },
   "esmodules": [
-    "scripts/sustain-main.mjs"
+	  "./scripts/sustain-main.mjs"
   ],
+  "styles": [
+  ],
+  "languages": [
+  ],
+  "url": "",
   "manifest": "",
-  "flags": {}
+  "download": ""
 }
