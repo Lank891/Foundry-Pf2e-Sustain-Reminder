@@ -4,7 +4,11 @@ const susainedEffectPrefix = 'Sustaining: ';
 const useChatSetting = 'useChat';
 const usePopupSetting = 'usePopup';
 
+let systemId = undefined;
+
 Hooks.on('init', () => {
+	systemId = game.system.id;
+	
 	/*
 	game.settings.register(moduleId, usePopupSetting, {
 		name: 'Use popup',
@@ -23,7 +27,6 @@ Hooks.on('init', () => {
 		type: Boolean,
 		default: true
 	});
-	
 });
 
 // Creating a reminder effect
@@ -48,7 +51,7 @@ Hooks.on('createChatMessage', async (message, options, userId) => {
 });
 
 // Showing the reminder
-Hooks.on('pf2e.startTurn', async (combatant, encounter, userId) => {
+Hooks.on(`pf2e.startTurn`, async (combatant, encounter, userId) => {
 	const { token, actor } = combatant;
 	const sustainedEffects = getTokenSustainEffects(token);
 	if(!sustainedEffects || sustainedEffects.length === 0)
@@ -69,17 +72,17 @@ Hooks.on('pf2e.startTurn', async (combatant, encounter, userId) => {
 			content: content,
 			speaker: ChatMessage.getSpeaker({ token, actor, user: game.users.get(userId) }),
 			whisper: owners,
-			flags: { "pf2e-sustain-reminder": true }
+			flags: {[`${moduleId}`]: true }
 		});
 	}
 });
 
 function isSpell(message) {
-	return message?.flags?.pf2e?.origin?.type === 'spell' ?? false;
+	return message?.flags?.[`${systemId}`]?.origin?.type === 'spell' ?? false;
 }
 
 function getSpellId(message) {
-	const uuid = message?.flags?.pf2e?.origin?.uuid ?? undefined;
+	const uuid = message?.flags?.[`${systemId}`]?.origin?.uuid ?? undefined;
 	if(!uuid) return undefined;
 	return uuid.split('.').pop();
 }
