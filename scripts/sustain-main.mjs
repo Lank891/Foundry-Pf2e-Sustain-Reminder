@@ -53,7 +53,8 @@ Hooks.on('createChatMessage', async (message, options, userId) => {
 // Showing the reminder
 Hooks.on(`pf2e.startTurn`, async (combatant, encounter, userId) => {
 	const { token, actor } = combatant;
-	const sustainedEffects = getTokenSustainEffects(token);
+	if (!actor) return;
+	const sustainedEffects = getActorSustainEffects(actor);
 	if(!sustainedEffects || sustainedEffects.length === 0)
 		return;
 	
@@ -169,6 +170,6 @@ function doesTokenContainEffectOfTheSameName(token, effect) {
 	return token.actor.items.find((item) => item.name === effect.name) !== undefined;
 }
 
-function getTokenSustainEffects(token) {
-	return token.actor.items.filter((item) => item.type === 'effect' && item.name.startsWith(susainedEffectPrefix));
+function getActorSustainEffects(actor) {
+	return actor.items.filter((item) => item.type === 'effect' && item.name.startsWith(susainedEffectPrefix));
 }
